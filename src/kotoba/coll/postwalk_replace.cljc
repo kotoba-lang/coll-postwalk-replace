@@ -1,10 +1,12 @@
 (ns kotoba.coll.postwalk-replace
-  "postwalk-replace -- one definition, addressed on its own.
+  "postwalk-replace -- addressed on its own.
 
-  Split out of kotoba.lang.text on 2026-09-09. The unit here is the
-  DEFINITION, not the library: this repo holds postwalk-replace and names, in its
-  deps.edn, exactly the definitions postwalk-replace reaches. Nothing else."
-  (:require [kotoba.coll.postwalk :refer [postwalk]]))
+  Split out of kotoba.lang.coll on 2026-09-09 (ADR-2609091200). The unit
+  here is the DEFINITION, and this repo's deps.edn names exactly the
+  definitions it reaches -- nothing else.
+"
+  (:require [kotoba.coll.postwalk :refer [postwalk]])
+)
 
 (defn postwalk-replace
   "Recursively transform `form` by replacing every node that is a key in
